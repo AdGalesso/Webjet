@@ -1,0 +1,59 @@
+﻿<section class="content">
+    <h1 class="text-right" ng-cloak>Lowest Price Guarantee at <span ng-bind="movies[0].database">store</span></h1>
+    <div class="movies-library dark">
+        <div class="loading-box" ng-if="loading">
+            <div class="loading-itens" ng-if="!bug">
+                <i class="fa fa-refresh fa-spin fa-4x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+                <p>Getting the best prices for you...</p>
+            </div>
+            <div class="loading-itens" ng-if="bug">
+                <p>{{bug}}</p>
+            </div>
+        </div>
+        <div class="row movie-item" ng-if="!loading">
+            <div class="col-xs-6 col-lg-4 col-xl-3" style="margin-bottom:30px; text-align: center;">
+                <img ng-src="{{detailsMovie.poster}}" width="300" />
+                <p><b>About this movie:</b></p>
+                <span>Release Date: <b>{{detailsMovie.released}}</b></span><br />
+                <span>Language: <b>{{detailsMovie.language}}</b></span><br />
+                <span>Country: <b>{{detailsMovie.country}}</b></span><br />
+                <span>Rated: <b>{{detailsMovie.rated}}</b></span><br />
+                <span>Metascore: <b>{{detailsMovie.metascore}}</b></span>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-8 col-xl-9">
+                <h2 style="margin:0"><i class="fa fa-film" aria-hidden="true"></i> {{detailsMovie.title}}</h2>
+                <em>
+                    {{detailsMovie.year}} - 
+                    {{detailsMovie.runtime}} - 
+                    {{detailsMovie.genre}} - 
+                    <span class="stars">
+                        <span class="yellow-stars">
+                            <span ng-repeat="i in getRatingNumber(detailsMovie.rating) track by $index">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </span>
+                        </span>
+                        <span class="white-stars">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </span>
+                    </span> -
+                    {{detailsMovie.votes}} votes
+                </em>
+                <p class="plot">{{detailsMovie.plot}}</p>
+                <p><i class="fa fa-video-camera" aria-hidden="true"></i> Actors: <b>{{detailsMovie.actors}}</b><br /><i class="fa fa-video-camera" aria-hidden="true"></i> Director: <b>{{detailsMovie.director}}</b></p>
+                <div class="buy" style="margin-top: 30px">
+                    <h3><i class="fa fa-money" aria-hidden="true"></i> Where to buy?</h3>
+                    <div class="col-md-{{12 / movies.length}} text-center" ng-repeat="movie in movies">
+                        <span class="store" style="display:block;font-size: 35px;">{{movie.database}}</span>
+                        <span class="price" style="display:block;font-size: 40px;">{{movie.price | currency}}</span>
+                        <span class="best-price" style="display:block;font-size: 40px;" ng-if="movie.best"><img src="../assets/img/best-price.png" /></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="moviesApp" xmlns:ng="http://angularjs.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Webjet | Star Wars</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="IndexController">
+    <div class="wrapper">
+        <header>
+            <a href="#/" class="starwars-logo"></a>
+        </header>
+        <div class="content-wrapper">
+            <div ng-view></div>
+        </div>
+        <footer class="main-footer">
+            <a href="https://www.webjet.com.au/" class="webjet-logo" target="_blank"></a>
+            <div class="pull-right hidden-xs" ng-cloak>
+                <b>Version</b> 1.0.0
+            </div>
+            <strong>Copyright &copy; 2016 Webjet | Star Wars.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.14/angular-filter.min.js"></script>
+
+    <script src="/assets/js/index.js"></script>
+    <script src="/assets/js/modules/base.js"></script>
+    <script src="/assets/js/modules/movie.js"></script>
+    <script src="/assets/js/pages/home.js"></script>
+    <script src="/assets/js/pages/details.js"></script>
+</body>
+</html>

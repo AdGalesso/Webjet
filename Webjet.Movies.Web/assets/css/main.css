@@ -1,0 +1,185 @@
+﻿* {
+    font-family: 'Abel', sans-serif;
+    text-transform: uppercase;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: static;
+    overflow: hidden;
+}
+
+    .wrapper:before,
+    .wrapper:after {
+        content: " ";
+        display: table;
+    }
+
+    .wrapper:after {
+        clear: both;
+    }
+
+.content {
+}
+
+.content-wrapper,
+.main-footer {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+    z-index: 820;
+}
+
+.content-wrapper {
+    min-height: 1070px;
+    background: url('../img/bg_stawars.jpg') no-repeat top center;
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+    header .starwars-logo {
+        background: url('../img/logo_starwars.png') no-repeat top center;
+        width: 200px;
+        height: 80px;
+        display: block;
+        position: absolute;
+        margin: 12px;
+    }
+
+.main-footer {
+    background: #010101;
+    padding: 20px;
+    color: #fff;
+}
+
+
+
+.webjet-logo {
+    background: url('../img/logo_webjet.png') no-repeat top center;
+    width: 392px;
+    height: 221px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -90px;
+}
+
+.content {
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 80%;
+}
+
+.movies-library {
+    min-height: 800px;
+    margin-top: 30px;
+    padding: 50px;
+    background-color: rgba(239, 235, 235, 0.25);
+    border-radius: 25px;
+}
+
+    .movies-library.dark {
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .movies-library .loading-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height:500px;
+        text-align:center;
+    }
+
+     
+
+.movies-library .movie-item {
+    padding-top: 10px;
+}
+
+    .movies-library .movie-item a {
+        position: relative;
+    }
+
+    .movies-library .movie-item span.title,
+    .movies-library .movie-item span.year {
+        position: absolute;
+        display: block;
+        width: 125%;
+        text-align: center;
+        color: #fff;
+        right: -31px;
+    }
+
+    .movies-library .movie-item span.title {
+        bottom: -9px;
+        background: #413838;
+    }
+
+    .movies-library .movie-item span.year {
+        bottom: -28px;
+        background: #a50c0c;
+    }
+
+    .movies-library .movie-item img {
+        border: 3px solid #413838;
+    }
+
+    .movies-library .movie-item .plot {
+        display: block;
+        margin: 25px 0;
+    }
+
+.stars {
+    position: relative;
+    width: 80px;
+}
+
+    .stars .yellow-stars {
+        color: #ffdb1d;
+        position: absolute;
+        width: 100%;
+    }
+
+    .stars .white-stars {
+        width: 100%;
+    }
+
+.best-price img {
+    border:none !important;
+    position: relative;
+    top: -20px;
+    right: -125px;
+}
+
+.loading-itens p {
+    margin-top:20px;
+}

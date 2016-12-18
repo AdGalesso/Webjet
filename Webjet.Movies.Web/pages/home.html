@@ -1,0 +1,24 @@
+﻿<section class="content">
+    <h1 class="text-right">Get the best Star Wars movie today!</h1>
+    <div class="movies-library">
+        <div class="loading-box" ng-if="loading">
+            <div class="loading-itens" ng-if="!bug">
+                <i class="fa fa-refresh fa-spin fa-4x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+                <p>Getting awesome movies...</p>
+            </div>
+            <div class="loading-itens" ng-if="bug">
+                <p>{{bug}}</p>
+            </div>
+        </div>
+        <div class="row" ng-if="!loading">
+            <div class="col-xs-12 col-sm-6 col-lg-4 col-xl-3 text-center movie-item" ng-repeat="movie in movies | unique:'year'" ng-cloak>
+                <a href="javascript:;" ng-click="getDetails(movie)">
+                    <img ng-src="{{movie.poster}}" height="350" width="250" />
+                    <span class="title">{{movie.title}}</span>
+                    <span class="year">{{movie.year}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
